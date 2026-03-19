@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro Pro</title>
+<link rel="stylesheet" href="Style.css">
+
+<link rel="stylesheet" href="style.css">
+<script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+<div class="fondo"></div>
+
+<div class="card">
+
+    <h1>Crear cuenta</h1>
+    <p class="sub">Únete a la experiencia premium</p>
+
+    <form id="formulario" novalidate>
+
+        <div class="input-box">
+            <input type="text" id="usuario" required minlength="4">
+            <label>Usuario</label>
+            <span class="error">Mínimo 4 caracteres</span>
+        </div>
+
+        <div class="input-box">
+            <input type="email" id="correo" required>
+            <label>Correo electrónico</label>
+            <span class="error">Correo inválido</span>
+        </div>
+
+        <div class="input-box">
+            <input type="password" id="password" required>
+            <label>Contraseña</label>
+            <span class="error">Mínimo 8 caracteres</span>
+
+            <div class="barra">
+                <div id="nivel"></div>
+            </div>
+        </div>
+
+        <button type="submit">Registrarme</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

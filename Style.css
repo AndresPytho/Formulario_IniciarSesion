@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background: url("imagenes/bright-pop-landscape-design\ \(1\).jpg") center/cover no-repeat fixed;
+}
+
+/* OSCURECE UN POCO PARA QUE SE LEA BIEN */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background: rgba(5,5,20,0.65);
+    backdrop-filter: blur(3px);
+}
+
+/* TARJETA */
+
+.card{
+    position:relative;
+    width:380px;
+    padding:45px 35px;
+    border-radius:22px;
+
+    background: rgba(10,15,40,0.55);
+    backdrop-filter: blur(18px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.7),
+        0 0 40px rgba(124,92,255,0.25);
+
+    color:white;
+    text-align:center;
+}
+
+/* TITULOS */
+
+h1{
+    font-size:28px;
+    margin-bottom:6px;
+}
+
+.sub{
+    font-size:14px;
+    opacity:.8;
+    margin-bottom:28px;
+    color:#c4b5fd;
+}
+
+/* INPUTS */
+
+.input-box{
+    text-align:left;
+    margin-bottom:22px;
+}
+
+.input-box label{
+    display:block;
+    font-size:13px;
+    color:#d1d5db;
+    margin-bottom:6px;
+}
+
+.input-box input{
+    width:100%;
+    padding:14px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.12);
+
+    background: rgba(0,0,0,0.35);
+    color:white;
+    font-size:14px;
+
+    outline:none;
+    transition:.25s;
+}
+
+.input-box input::placeholder{
+    color:#9ca3af;
+}
+
+.input-box input:focus{
+    border-color:#a78bfa;
+    box-shadow:0 0 12px rgba(167,139,250,0.6);
+    background: rgba(0,0,0,0.5);
+}
+
+/* ERROR */
+
+.error{
+    font-size:12px;
+    color:#fb7185;
+    margin-top:5px;
+    display:none;
+}
+
+input:invalid:not(:placeholder-shown) ~ .error{
+    display:block;
+}
+
+/* BARRA DE SEGURIDAD */
+
+.barra{
+    width:100%;
+    height:6px;
+    background: rgba(255,255,255,0.1);
+    border-radius:4px;
+    margin-top:10px;
+}
+
+#nivel{
+    height:100%;
+    width:0%;
+    background: linear-gradient(90deg,#f472b6,#8b5cf6);
+    border-radius:4px;
+    transition:.3s;
+}
+
+/* BOTON NEÓN */
+
+button{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    margin-top:12px;
+
+    font-weight:bold;
+    font-size:15px;
+
+    background: linear-gradient(135deg,#8b5cf6,#6366f1);
+    color:white;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 30px rgba(139,92,246,0.7);
+}
